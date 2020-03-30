@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Купить</title>
+	<link rel="stylesheet" href="reset.css">
+
+	<link rel="stylesheet" href="main.css">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+</head>
+<body class="buy">
+	<main class="buy__wrapper">
+		<h2>Обзорная экскурсия по Одессе</h2>
+		<form class="buy__form" action="#">
+			<input type="text" name="name" placeholder="Имя">
+			<input type="tel" name="tel" placeholder="Номер телефона">		    <div class="buy__numbers">
+			    <label class="buy__label_number" for="adult">
+			    	<span>К-ство взрослых</span>
+					<span class="buy__number-btn" onclick="this.nextElementSibling.stepDown()">-</span>
+					<input type="number" min="0" max="100" value="1" id="adult" class="buy__number">
+					<span class="buy__number-btn" onclick="this.previousElementSibling.stepUp()">+</span>
+			    </label>
+			    <label class="buy__label_number" for="kids">
+			    	<span>К-ство детей</span>
+					<span class="buy__number-btn" onclick="this.nextElementSibling.stepDown()">-</span>
+					<input type="number" min="0" max="100" value="0" id="kids" class="buy__number">
+					<span class="buy__number-btn" onclick="this.previousElementSibling.stepUp()">+</span>
+			    </label>
+			</div>	
+			<table id="calendar" class="unselectable">
+				<thead>
+					<tr><td colspan="7">
+					<tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+				<tbody>
+			</table>
+			<p><span class="bold">Сумма к оплате:</span>
+			<input class="buy__sum" type="text" readonly value="1000 грн. 00 коп."></p>
+			<p class="small buy__explanation">Ссылка на билет прийдет в смс-сообщении</p>
+		
+		    <input class="btn btn_yellow" type="submit" value="Купить">
+		</form>
+	</main>
+	<script src="js/form.js"></script>
+</body>
+</html>
